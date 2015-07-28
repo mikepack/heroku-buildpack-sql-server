@@ -8,7 +8,7 @@ CACHE_DIR = ARGV[1]
 
 puts "-----> Writing config/database.yml to read from DATABASE_URI"
 
-File.open("/app/config/database.yml", "w") do |file|
+File.open("#{BUILD_DIR}/config/database.yml", "w") do |file|
   file.puts <<-DATABASE_YML
     <%
     require 'cgi'
