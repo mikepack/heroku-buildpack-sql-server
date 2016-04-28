@@ -35,7 +35,7 @@ end
 adapter = uri.scheme
 database = (uri.path || "").split("/")[1]
 username = URI.decode(uri.user)
-password = uri.password
+password = URI.decode(uri.password)
 host = uri.host
 port = uri.port
 params = CGI.parse(uri.query || "")
